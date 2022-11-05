@@ -15,6 +15,7 @@
               "state": {
                 "file": "Recipe/My Recipe.md",
                 "mode": "source",
+                "backlinks": true,
                 "source": false
               }
             }
@@ -65,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -144,7 +146,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6de84bd546809063",
+  "active": "185a48ae9d548a61",
   "lastOpenFiles": [
     "Recipe/My Recipe.md"
   ]
