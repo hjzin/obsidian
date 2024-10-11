@@ -1,5 +1,5 @@
 import * as core from "@actions/core";
-import { context, getOcktokit } from "@actions/github";
+import { context, getOctokit } from "@actions/github";
 
 async function run() {
     try {
@@ -19,7 +19,7 @@ async function run() {
         }
 
         const token = core.getInput("repo-token", { required: true });
-        const octokit = getOcktokit(token);
+        const octokit = getOctokit(token);
         const result = await octokit.rest.issues.addAssignees({
             owner: context.repo.owner,
             repo: context.repo.repo,
