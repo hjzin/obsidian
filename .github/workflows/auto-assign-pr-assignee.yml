@@ -16,4 +16,5 @@ jobs:
             - run: npm install @actions/github
             - run: apt-get update -y
             - run: apt-get install git-lfs -y
+            - run: git lfs install
             - run: node .github/workflows/src/index.js ${{ github.token }}
