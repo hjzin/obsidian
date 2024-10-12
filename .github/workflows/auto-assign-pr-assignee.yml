@@ -12,9 +12,9 @@ jobs:
         container: node:20
         steps:
             - uses: actions/checkout@v4
+              with:
+                sparse-checkout: |
+                    .github/workflows/src
             - run: npm install @actions/core
             - run: npm install @actions/github
-            - run: apt-get update -y
-            - run: apt-get install git-lfs -y
-            - run: git lfs install
             - run: node .github/workflows/src/index.js ${{ github.token }}
