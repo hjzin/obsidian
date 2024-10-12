@@ -9,11 +9,12 @@ permissions:
 jobs:
     auto-assign-to-author:
         runs-on: ubuntu-latest
-        container: node:20
+        container:
+            image: node:20
+            volumes:
+                - ./github/workflows/src:./auto-assign-workflow/src
         steps:
             - uses: actions/checkout@v4
             - run: npm install @actions/core
             - run: npm install @actions/github
-            - uses: ./.github/actions/auto-assign
-              with:
-                  repo-token: ${{ github.token }}
+            - run: node ./auto-assign-workflow/src/index.js
