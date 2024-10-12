@@ -9,11 +9,9 @@ permissions:
 jobs:
     auto-assign-to-author:
         runs-on: ubuntu-latest
+        container: node:20
         steps:
             - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: '20'
             - run: npm install @actions/core
             - run: npm install @actions/github
             - uses: ./.github/actions/auto-assign
