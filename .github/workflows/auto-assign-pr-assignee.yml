@@ -14,4 +14,4 @@ jobs:
             - uses: actions/checkout@v4
             - run: npm install @actions/core
             - run: npm install @actions/github
-            - run: node .github/workflows/src/index.js
+            - run: node .github/workflows/src/index.js ${{ github.token }}

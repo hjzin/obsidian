@@ -18,7 +18,7 @@ async function run() {
             return;
         }
 
-        const token = core.getInput("repo-token", { required: true });
+        const token = process.argv[2];
         const octokit = getOctokit(token);
         const result = await octokit.rest.issues.addAssignees({
             owner: context.repo.owner,
