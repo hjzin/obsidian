@@ -1,6 +1,6 @@
 name: auto-assign-to-author
 on:
-    pull_request_target:
+    pull_request:
         types: [opened, reopened]
 
 permissions:
@@ -11,7 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         container: node:20
         steps:
-            # - uses: actions/checkout@v4
+            - uses: actions/checkout@v4
             - run: npm install @actions/core
             - run: npm install @actions/github
             - run: node .github/workflows/src/index.js ${{ github.token }}
