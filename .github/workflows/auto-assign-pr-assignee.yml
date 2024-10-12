@@ -12,8 +12,8 @@ jobs:
         container:
             image: node:20
             volumes:
-                - ./github/workflows/src:/opt/auto-assign-workflow/src
+                - ./github/workflows/src:/opt/auto-assign-workflow
         steps:
             - run: npm install @actions/core
             - run: npm install @actions/github
-            - run: node ./auto-assign-workflow/src/index.js
+            - run: node /opt/auto-assign-workflow/index.js
