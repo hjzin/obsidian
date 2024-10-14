@@ -17,4 +17,4 @@ jobs:
                     .github/workflows/src
             - run: npm install @actions/core
             - run: npm install @actions/github
-            - run: node .github/workflows/src/index.js ${{ github.token }}
+            # - run: node .github/workflows/src/index.js ${{ github.token }}
