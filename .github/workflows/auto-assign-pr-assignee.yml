@@ -22,7 +22,7 @@ jobs:
                     .github/workflows/src
             - run: npm install @actions/core
             - run: |
-                for assignee in ${{ toJson(github.event.pull_request.assignees) }}; do
+                for assignee in ${{ github.event.pull_request.assignees }}; do
                     echo "Assignee: $assignee.login"
                 done
             - run: npm install @actions/github
