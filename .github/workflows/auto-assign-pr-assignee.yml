@@ -14,7 +14,7 @@ permissions:
 jobs:
     auto-assign-to-author:
         runs-on: ubuntu-latest
-        if: ${{ toJson(github.event.pull_request.assignees) == [] }}
+        if: ${{ toJson(github.event.pull_request.assignees) == '[]' }}
         container: node:20
         steps:
             - uses: actions/checkout@v4
